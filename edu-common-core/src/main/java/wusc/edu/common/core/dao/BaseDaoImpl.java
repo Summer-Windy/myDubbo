@@ -195,6 +195,8 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSup
 			return new PageBean(pageParam.getPageNum(), pageParam.getNumPerPage(), count.intValue(), list);
 		}
 	}
+	
+	
 
 	/**
 	 * 根据条件查询 listBy: <br/>
@@ -205,6 +207,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSup
 	public List<T> listBy(Map<String, Object> paramMap) {
 		return sessionTemplate.selectList(getStatement(SQL_LIST_BY), paramMap);
 	}
+	
 
 	/**
 	 * 根据条件查询 getBy: selectOne <br/>

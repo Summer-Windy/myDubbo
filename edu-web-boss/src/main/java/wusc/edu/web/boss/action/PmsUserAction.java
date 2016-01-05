@@ -15,6 +15,7 @@ import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.facade.user.enums.UserStatusEnum;
 import wusc.edu.facade.user.enums.UserTypeEnum;
 import wusc.edu.facade.user.service.PmsUserFacade;
+import wusc.edu.facade.user.service.PmsUserReportFacade;
 import wusc.edu.web.boss.base.BaseAction;
 
 
@@ -37,6 +38,8 @@ public class PmsUserAction extends BaseAction {
 
 	@Autowired
 	private PmsUserFacade pmsUserFacade;
+	@Autowired
+	private PmsUserReportFacade pmsUserReportFacade;
 
 	// /////////////////////////////////// 用户管理   //////////////////////////////////////////
 	/**
@@ -69,6 +72,12 @@ public class PmsUserAction extends BaseAction {
 			log.error("== listPmsUser exception:", e);
 			return operateError("获取数据失败");
 		}
+	}
+	
+	public String reportPmsUser() {
+		String report = pmsUserReportFacade.report();
+		this.putData("userReport",report);
+		return "PmsUserReport";
 	}
 
 	/**

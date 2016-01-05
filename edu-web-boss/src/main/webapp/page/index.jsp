@@ -54,8 +54,10 @@ String path = request.getContextPath();
 						<ul class="tree treeFolder">
 							<li><a href="pms_listPmsUser.action" target="navTab" rel="listPmsUser" fresh="true">用户信息管理</a></li>
 						</ul>
+						<ul class="tree treeFolder">
+							<li><a href="pms_reportPmsUser.action" target="navTab2" rel="reportPmsUser" fresh="true">report</a></li>
+						</ul>
 					</div>
-					
 				</div>
 			</div>
 		</div>
@@ -86,6 +88,33 @@ String path = request.getContextPath();
 					
 				</div>
 			</div>
+			<div id="navTab2" class="tabsPage">
+				<div class="tabsPageHeader">
+					<div class="tabsPageHeaderContent">
+						<ul class="navTab-tab">
+							<li tabid="main" class="main"><a href="javascript:;"><span><span class="home_icon">主页</span></span></a></li>
+						</ul>
+					</div>
+					<div class="tabsLeft">left</div>
+					<div class="tabsRight">right</div>
+					<div class="tabsMore">more</div>
+				</div>
+				<ul class="tabsMoreList">
+					<li><a href="javascript:;">主页</a></li>
+				</ul>
+				<div class="navTab-panel tabsPageContent layoutBox">
+					<div class="page unitBox">
+						<div class="accountInfo">
+							<p><span>XX管理后台</span></p>
+						</div>
+						<div class="pageFormContent" layoutH="60" style="margin-right:230px">
+						
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
 		</div>
 
 	</div>

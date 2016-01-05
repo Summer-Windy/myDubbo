@@ -10,6 +10,7 @@
 		<!-- 权限管理，包括权限点、角色、用户和管理 -->
 		<action name="pms_*" class="wusc.edu.web.boss.action.PmsUserAction" method="{1}">
 			<result name="PmsUserList">page/pms/PmsUserList.jsp</result>
+			<result name="PmsUserReport">page/pms/PmsUserReport.jsp</result>
 			<result name="PmsUserView">page/pms/PmsUserView.jsp</result>
 			<result name="PmsUserViewOwnInfo">page/pms/PmsUserViewOwnInfo.jsp</result>
 			<result name="PmsUserAdd">page/pms/PmsUserAdd.jsp</result>

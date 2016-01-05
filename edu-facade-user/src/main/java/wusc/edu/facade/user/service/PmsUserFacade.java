@@ -54,7 +54,7 @@ public interface PmsUserFacade {
 	 * 
 	 * @param userId
 	 * @param newPwd
-	 *            (已进行SHA1加密)
+	 * (已进行SHA1加密)
 	 */
 	public void updateUserPwd(Long userId, String newPwd, boolean isTrue);
 
@@ -67,4 +67,5 @@ public interface PmsUserFacade {
 	 * @return
 	 */
 	public PageBean listPage(PageParam pageParam, Map<String, Object> paramMap);
+	
 }

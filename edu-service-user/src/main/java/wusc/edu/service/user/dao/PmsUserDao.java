@@ -1,5 +1,7 @@
 package wusc.edu.service.user.dao;
 
+import java.util.List;
+
 import wusc.edu.common.core.dao.BaseDao;
 import wusc.edu.facade.user.entity.PmsUser;
 
@@ -22,4 +24,5 @@ public interface PmsUserDao extends BaseDao<PmsUser> {
 	 */
 	PmsUser findByUserNo(String userNo);
 
+	List<PmsUser> countAll();
 }

@@ -1,9 +1,12 @@
 package wusc.edu.service.user.biz;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.alibaba.fastjson.JSON;
 
 import wusc.edu.common.page.PageBean;
 import wusc.edu.common.page.PageParam;
@@ -100,6 +103,10 @@ public class PmsUserBiz {
 		return pmsUserDao.listPage(pageParam, paramMap);
 	}
 
-
+	
+	public String report(){
+		List<PmsUser> list = pmsUserDao.countAll();
+		return JSON.toJSONString(list);
+	}
 
 }

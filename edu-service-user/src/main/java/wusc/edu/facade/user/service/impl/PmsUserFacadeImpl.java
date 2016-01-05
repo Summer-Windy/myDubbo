@@ -90,4 +90,5 @@ public class PmsUserFacadeImpl implements PmsUserFacade {
 	public PageBean listPage(PageParam pageParam, Map<String, Object> paramMap) {
 		return pmsUserBiz.listPage(pageParam, paramMap);
 	}
+
 }

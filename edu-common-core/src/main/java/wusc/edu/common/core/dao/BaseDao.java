@@ -93,6 +93,7 @@ public interface BaseDao<T> {
 	 */
 	public List<T> listBy(Map<String, Object> paramMap);
 
+
 	/**
 	 * 根据条件查询 listBy: <br/>
 	 * 

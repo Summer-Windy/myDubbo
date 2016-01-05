@@ -18,5 +18,6 @@
 		
 	<!-- 用户服务接口 -->
 	<dubbo:service interface="wusc.edu.facade.user.service.PmsUserFacade" ref="pmsUserFacade" />
+	<dubbo:service interface="wusc.edu.facade.user.service.PmsUserReportFacade" ref="pmsUserReportFacade" />
 
 </beans>  

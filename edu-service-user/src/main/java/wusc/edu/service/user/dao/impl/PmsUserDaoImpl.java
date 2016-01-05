@@ -1,5 +1,7 @@
 package wusc.edu.service.user.dao.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import wusc.edu.common.core.dao.BaseDaoImpl;
@@ -27,6 +29,11 @@ public class PmsUserDaoImpl extends BaseDaoImpl<PmsUser> implements PmsUserDao {
 
 	public PmsUser findByUserNo(String userNo) {
 		return super.getSqlSession().selectOne(getStatement("findByUserNo"), userNo);
+	}
+
+	public List<PmsUser> countAll() {
+		List<PmsUser> list = super.getSqlSession().selectList(getStatement("listAll"));
+		return list;
 	}
 
 }
